@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "eProc + Calendar",
+  "version": "1.0.1",
+  "description": "Adicione audiências e prazos de processos ao seu Google Calendar com 1 click",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "/icons/eproccalendaricon.png"
+    }
+  },
+  "permissions": [
+    "scripting",
+    "storage",
+    "identity"
+  ],
+  "host_permissions": [
+    "https://*/audiencia_futura_listar*",
+    "https://*/citacao_intimacao_prazo_aberto_listar*",
+    "https://*/processo_selecionar*",
+    "https://www.googleapis.com/"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*"
+      ],
+      "js": [
+        "config.js",
+        "utils.js",
+        "content-audiencias.js",
+        "content-processos.js",
+        "content-processo-detalhe.js"
+      ],
+      "css": [
+        "styles.css"
+      ]
+    }
+  ],
+  "icons": {
+    "128": "/icons/eproccalendaricon.png"
+  }
+}

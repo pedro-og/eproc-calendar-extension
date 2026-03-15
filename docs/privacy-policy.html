@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade - eProc Calendar</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.7;
+      color: #333;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background: #fafafa;
+    }
+    h1 { font-size: 28px; color: #1a1a2e; margin-bottom: 8px; }
+    .subtitle { color: #666; font-size: 14px; margin-bottom: 32px; }
+    h2 { font-size: 18px; color: #1a1a2e; margin-top: 28px; margin-bottom: 12px; }
+    p, li { font-size: 15px; margin-bottom: 12px; }
+    ul { padding-left: 24px; margin-bottom: 12px; }
+    a { color: #4a90e2; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 13px; color: #888; }
+  </style>
+</head>
+<body>
+  <h1>Política de Privacidade</h1>
+  <p class="subtitle">eProc Calendar &mdash; Extensão para Google Chrome</p>
+  <p class="subtitle">Última atualização: 14 de março de 2026</p>
+
+  <h2>1. Introdução</h2>
+  <p>A extensão <strong>eProc Calendar</strong> ("Extensão") permite que profissionais do Direito adicionem audiências e prazos processuais do sistema eProc diretamente ao Google Calendar com um clique. Esta Política de Privacidade descreve como a Extensão trata os dados dos usuários.</p>
+
+  <h2>2. Dados coletados e utilizados</h2>
+  <p>A Extensão acessa os seguintes dados exclusivamente para cumprir sua funcionalidade:</p>
+  <ul>
+    <li><strong>Dados de páginas do eProc:</strong> A Extensão lê informações exibidas nas páginas do sistema eProc (números de processos, nomes de partes, datas de audiências e prazos) para montar os eventos do calendário. Esses dados são processados localmente no navegador do usuário e não são enviados a nenhum servidor externo.</li>
+    <li><strong>Token de autenticação OAuth do Google:</strong> Ao autorizar a Extensão, um token de acesso é obtido via fluxo OAuth 2.0 do Google. Esse token é armazenado localmente no navegador do usuário (via <code>chrome.storage.local</code>) e é utilizado exclusivamente para criar eventos no Google Calendar do usuário.</li>
+    <li><strong>Configurações do usuário:</strong> Preferências como antecedência em dias, cor dos eventos e emails de convidados são armazenadas localmente no navegador (via <code>chrome.storage.sync</code>).</li>
+  </ul>
+
+  <h2>3. Dados NÃO coletados</h2>
+  <p>A Extensão <strong>NÃO</strong>:</p>
+  <ul>
+    <li>Coleta, armazena ou transmite dados pessoais para servidores externos</li>
+    <li>Utiliza cookies de rastreamento ou ferramentas de analytics</li>
+    <li>Compartilha dados com terceiros</li>
+    <li>Armazena dados processuais fora do navegador do usuário</li>
+    <li>Acessa ou modifica eventos existentes no Google Calendar &mdash; apenas cria novos eventos</li>
+  </ul>
+
+  <h2>4. Uso da API do Google</h2>
+  <p>A Extensão utiliza a API do Google Calendar com o escopo <code>calendar.events</code>, que permite exclusivamente criar eventos no calendário do usuário. A Extensão:</p>
+  <ul>
+    <li>Não lê, modifica ou exclui eventos existentes do calendário</li>
+    <li>Não acessa outros serviços do Google além do Google Calendar</li>
+    <li>Segue a <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado</li>
+  </ul>
+
+  <h2>5. Armazenamento de dados</h2>
+  <p>Todos os dados são armazenados localmente no navegador do usuário:</p>
+  <ul>
+    <li><strong>Token OAuth:</strong> armazenado em <code>chrome.storage.local</code>, acessível apenas pela Extensão</li>
+    <li><strong>Configurações:</strong> armazenadas em <code>chrome.storage.sync</code>, sincronizadas entre dispositivos do usuário via conta do Chrome</li>
+  </ul>
+  <p>Nenhum dado é armazenado em servidores externos.</p>
+
+  <h2>6. Permissões da extensão</h2>
+  <p>A Extensão solicita as seguintes permissões do Chrome:</p>
+  <ul>
+    <li><strong>identity:</strong> para autenticar o usuário com sua conta Google via OAuth 2.0</li>
+    <li><strong>storage:</strong> para salvar configurações e o token de acesso localmente</li>
+    <li><strong>scripting:</strong> para injetar botões de ação nas páginas do eProc</li>
+    <li><strong>Acesso a sites do eProc:</strong> para ler informações de audiências e prazos exibidas na tela</li>
+    <li><strong>Acesso a googleapis.com:</strong> para criar eventos no Google Calendar</li>
+  </ul>
+
+  <h2>7. Revogação de acesso</h2>
+  <p>O usuário pode revogar o acesso da Extensão a qualquer momento:</p>
+  <ul>
+    <li>Removendo a Extensão do Chrome (Menu &gt; Extensões &gt; Gerenciar extensões)</li>
+    <li>Revogando o acesso em <a href="https://myaccount.google.com/permissions" target="_blank">Configurações de Segurança da Conta Google</a></li>
+  </ul>
+
+  <h2>8. Segurança</h2>
+  <p>A Extensão adota as seguintes medidas de segurança:</p>
+  <ul>
+    <li>Todas as comunicações com o Google são feitas via HTTPS</li>
+    <li>O token OAuth é armazenado de forma segura no armazenamento interno do Chrome, inacessível a outros sites ou extensões</li>
+    <li>Nenhum dado sensível é transmitido para servidores de terceiros</li>
+  </ul>
+
+  <h2>9. Alterações nesta política</h2>
+  <p>Eventuais alterações nesta Política de Privacidade serão publicadas nesta página com a data de atualização revisada. Recomendamos que o usuário revise esta política periodicamente.</p>
+
+  <h2>10. Contato</h2>
+  <p>Para dúvidas sobre esta Política de Privacidade ou sobre o tratamento de dados pela Extensão, entre em contato pelo email: <a href="mailto:pedroogonzaga@gmail.com">pedroogonzaga@gmail.com</a></p>
+
+  <div class="footer">
+    <p>&copy; 2026 eProc Calendar. Todos os direitos reservados.</p>
+  </div>
+</body>
+</html>

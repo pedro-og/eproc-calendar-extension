@@ -251,6 +251,32 @@
     .email-tag .tag-remove:hover {
       color: #c62828;
     }
+
+    .support-section {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid #eee;
+      text-align: center;
+    }
+
+    .support-section p {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .support-link {
+      color: #4a90e2;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .support-link:hover {
+      color: #357abd;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -312,6 +338,10 @@
 
   <button id="save">Salvar</button>
   <div id="status"></div>
+
+  <div class="support-section">
+    <p>💡 Encontrou um problema ou tem uma ideia? <a href="mailto:support.eproc.extension@gmail.com" class="support-link">support.eproc.extension@gmail.com</a></p>
+  </div>
 
   <script src="config.js"></script>
   <script src="popup.js"></script>

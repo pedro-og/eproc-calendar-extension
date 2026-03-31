@@ -10,7 +10,6 @@
     }
   },
   "permissions": [
-    "scripting",
     "storage",
     "identity"
   ],

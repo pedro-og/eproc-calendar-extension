@@ -3,32 +3,303 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>eProc Calendar</title>
+  <title>eProc Calendar – Extensão para Google Chrome</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       line-height: 1.7;
       color: #333;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 40px 20px;
       background: #fafafa;
     }
-    h1 { font-size: 28px; color: #1a1a2e; margin-bottom: 16px; }
+
+    /* Header */
+    header {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 48px 20px 40px;
+      text-align: center;
+    }
+    header img {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      margin-bottom: 16px;
+    }
+    header h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    header p {
+      font-size: 16px;
+      color: #aab4d4;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* Main content */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    section { margin-bottom: 40px; }
+
+    h2 {
+      font-size: 20px;
+      color: #1a1a2e;
+      margin-bottom: 14px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #e8eaf0;
+    }
+
     p { font-size: 15px; margin-bottom: 12px; }
+
+    ul {
+      padding-left: 24px;
+      margin-bottom: 12px;
+    }
+    li { font-size: 15px; margin-bottom: 8px; }
+
+    /* Feature cards */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .feature-card {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 20px 18px;
+    }
+    .feature-card .icon { font-size: 26px; margin-bottom: 8px; }
+    .feature-card h3 { font-size: 15px; color: #1a1a2e; margin-bottom: 6px; }
+    .feature-card p { font-size: 14px; color: #555; margin: 0; }
+
+    /* Data table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+    th {
+      background: #f0f2f8;
+      text-align: left;
+      padding: 10px 14px;
+      color: #1a1a2e;
+      font-weight: 600;
+    }
+    td { padding: 10px 14px; border-bottom: 1px solid #eee; }
+    tr:last-child td { border-bottom: none; }
+
+    /* Permissions */
+    .perm-list { list-style: none; padding: 0; }
+    .perm-list li {
+      display: flex;
+      gap: 12px;
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .perm-list .perm-name {
+      font-weight: 600;
+      color: #1a1a2e;
+      min-width: 110px;
+      flex-shrink: 0;
+    }
+    .perm-list .perm-reason { color: #444; }
+
+    /* Privacy highlight */
+    .privacy-box {
+      background: #eef6ff;
+      border-left: 4px solid #4a90e2;
+      border-radius: 0 8px 8px 0;
+      padding: 18px 20px;
+      margin-top: 8px;
+    }
+    .privacy-box p { margin: 0; font-size: 14px; color: #2c4a70; }
+
+    /* Footer */
+    footer {
+      background: #1a1a2e;
+      color: #aab4d4;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 13px;
+    }
+    footer a { color: #7eb8f7; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    footer .links { margin-bottom: 10px; }
+    footer .links a { margin: 0 12px; }
+
     a { color: #4a90e2; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    ul { padding-left: 24px; margin-bottom: 12px; }
-    li { margin-bottom: 8px; }
   </style>
 </head>
 <body>
-  <h1>eProc Calendar</h1>
-  <p>Extensão para Google Chrome que permite adicionar audiências e prazos processuais do sistema eProc ao Google Calendar com 1 clique.</p>
-  <ul>
-    <li><a href="privacy-policy.html">Política de Privacidade</a></li>
-    <li><a href="terms.html">Termos de Serviço</a></li>
-  </ul>
+
+  <header>
+    <h1>eProc Calendar</h1>
+    <p>Extensão gratuita para Google Chrome que adiciona audiências e prazos processuais do sistema eProc diretamente ao seu Google Calendar com um clique.</p>
+  </header>
+
+  <main>
+
+    <!-- O que é -->
+    <section>
+      <h2>O que é o eProc Calendar?</h2>
+      <p>
+        O <strong>eProc Calendar</strong> é uma extensão para Google Chrome desenvolvida para advogados, promotores e demais profissionais do Direito que utilizam o sistema <strong>eProc</strong> (e-Proc TRF4, JFRS, e plataformas correlatas).
+      </p>
+      <p>
+        Com um único clique, a extensão lê as audiências e prazos processuais exibidos na tela do eProc e cria eventos no seu <strong>Google Calendar</strong>, eliminando a necessidade de inserção manual de dados.
+      </p>
+    </section>
+
+    <!-- Funcionalidades -->
+    <section>
+      <h2>Funcionalidades</h2>
+      <div class="features">
+        <div class="feature-card">
+          <div class="icon">📅</div>
+          <h3>Audiências para o Calendar</h3>
+          <p>Exporte audiências futuras listadas no eProc para o Google Calendar com um clique.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">⏰</div>
+          <h3>Prazos processuais</h3>
+          <p>Crie eventos de prazos abertos diretamente a partir das páginas de processos.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🔔</div>
+          <h3>Lembretes automáticos</h3>
+          <p>Configure a antecedência dos lembretes e receba notificações antes do prazo.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🎨</div>
+          <h3>Personalização</h3>
+          <p>Escolha a cor dos eventos e adicione convidados automaticamente.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Como funciona -->
+    <section>
+      <h2>Como funciona</h2>
+      <ol style="padding-left: 24px; margin-top: 4px;">
+        <li style="margin-bottom: 10px; font-size: 15px;">Instale a extensão pelo Chrome Web Store.</li>
+        <li style="margin-bottom: 10px; font-size: 15px;">Autorize o acesso à sua conta Google (somente criação de eventos no Calendar).</li>
+        <li style="margin-bottom: 10px; font-size: 15px;">Acesse as páginas de audiências ou prazos no sistema eProc.</li>
+        <li style="margin-bottom: 10px; font-size: 15px;">Clique no botão "Adicionar ao Calendar" exibido pela extensão.</li>
+        <li style="font-size: 15px;">O evento é criado automaticamente no seu Google Calendar.</li>
+      </ol>
+    </section>
+
+    <!-- Dados do usuário -->
+    <section>
+      <h2>Quais dados a extensão acessa e por quê?</h2>
+      <p>A extensão acessa apenas os dados estritamente necessários para sua funcionalidade. Veja a lista completa:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Dado</th>
+            <th>Finalidade</th>
+            <th>Armazenamento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Conteúdo das páginas do eProc</strong> (números de processos, nomes de partes, datas)</td>
+            <td>Montar os eventos do calendário com as informações corretas</td>
+            <td>Processado localmente no navegador — nunca enviado a servidores externos</td>
+          </tr>
+          <tr>
+            <td><strong>Token OAuth do Google</strong></td>
+            <td>Autenticar o usuário para criar eventos no Google Calendar</td>
+            <td>Armazenado localmente no Chrome (<code>chrome.storage.local</code>) — nunca transmitido</td>
+          </tr>
+          <tr>
+            <td><strong>Preferências do usuário</strong> (cor dos eventos, antecedência, convidados)</td>
+            <td>Personalizar os eventos criados conforme configuração do usuário</td>
+            <td>Sincronizado pelo Chrome (<code>chrome.storage.sync</code>) entre dispositivos do usuário</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="privacy-box" style="margin-top: 16px;">
+        <p>
+          <strong>Nenhum dado pessoal ou processual é enviado a servidores externos.</strong>
+          Todo o processamento ocorre localmente no seu navegador. A extensão não coleta analytics, não usa cookies de rastreamento e não compartilha informações com terceiros.
+        </p>
+      </div>
+    </section>
+
+    <!-- Permissões -->
+    <section>
+      <h2>Permissões solicitadas ao Chrome</h2>
+      <p>A extensão solicita as seguintes permissões, cada uma com finalidade específica:</p>
+      <ul class="perm-list">
+        <li>
+          <span class="perm-name">identity</span>
+          <span class="perm-reason">Autenticar o usuário com sua conta Google via OAuth 2.0, necessário para criar eventos no Google Calendar.</span>
+        </li>
+        <li>
+          <span class="perm-name">storage</span>
+          <span class="perm-reason">Salvar o token de acesso e as preferências do usuário localmente no navegador.</span>
+        </li>
+        <li>
+          <span class="perm-name">scripting</span>
+          <span class="perm-reason">Injetar os botões de ação ("Adicionar ao Calendar") nas páginas do eProc.</span>
+        </li>
+        <li>
+          <span class="perm-name">Acesso ao eProc</span>
+          <span class="perm-reason">Ler as informações de audiências e prazos exibidas nas páginas do sistema eProc para montar os eventos.</span>
+        </li>
+        <li>
+          <span class="perm-name">googleapis.com</span>
+          <span class="perm-reason">Comunicar-se com a API do Google Calendar (escopo <code>calendar.events</code>) para criar eventos.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Google API -->
+    <section>
+      <h2>Uso da API do Google</h2>
+      <p>A extensão utiliza a <strong>Google Calendar API</strong> com o escopo restrito <code>https://www.googleapis.com/auth/calendar.events</code>, que permite exclusivamente:</p>
+      <ul>
+        <li>Criar novos eventos no calendário do usuário</li>
+      </ul>
+      <p>A extensão <strong>não</strong> lê, modifica, exclui ou lista eventos existentes. Não acessa nenhum outro serviço do Google.</p>
+      <p>O uso da API está em conformidade com a <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado.</p>
+    </section>
+
+    <!-- Contato -->
+    <section>
+      <h2>Suporte e Contato</h2>
+      <p>Para dúvidas, sugestões ou suporte técnico:</p>
+      <p>
+        Email: <a href="mailto:support.eproc.extension@gmail.com">support.eproc.extension@gmail.com</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="links">
+      <a href="privacy-policy.html">Política de Privacidade</a>
+      <a href="terms.html">Termos de Serviço</a>
+    </div>
+    <p>&copy; 2026 eProc Calendar. Todos os direitos reservados.</p>
+  </footer>
+
 </body>
 </html>

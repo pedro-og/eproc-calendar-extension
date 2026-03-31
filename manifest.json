@@ -15,9 +15,7 @@
     "identity"
   ],
   "host_permissions": [
-    "https://*/audiencia_futura_listar*",
-    "https://*/citacao_intimacao_prazo_aberto_listar*",
-    "https://*/processo_selecionar*",
+    "https://*.jus.br/*",
     "https://www.googleapis.com/"
   ],
   "background": {
@@ -26,7 +24,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://*/*"
+        "https://*.jus.br/*"
       ],
       "js": [
         "config.js",
